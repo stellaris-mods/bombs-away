@@ -1,0 +1,44 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+ship_design = {
+	name = "BOMB Wormhole"
+	ship_size = bombsaway_standard
+	use_design_name = yes
+	required_component="WORMHOLE_DRIVE"
+	required_component = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+}
+ship_design = {
+	name = "BOMB Hyper"
+	ship_size = bombsaway_standard
+	use_design_name = yes
+	required_component="HYPER_DRIVE_3"
+	required_component = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+}
+ship_design = {
+	name = "BOMB Warp"
+	ship_size = bombsaway_standard
+	use_design_name = yes
+	required_component="WARP_DRIVE_3"
+	required_component = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+}
+ship_design = {
+	name = "BOMB Jump"
+	ship_size = bombsaway_standard
+	use_design_name = yes
+	required_component="JUMP_DRIVE_1"
+	required_component = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+}
+ship_design = {
+	name = "BOMB Psi Jump"
+	ship_size = bombsaway_standard
+	use_design_name = yes
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component = "COMBAT_COMPUTER_AGGRESSIVE_BASIC"
+}

@@ -1,0 +1,33 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+bombsaway_standard = {
+	formation_priority = 4
+	max_speed = 10
+	acceleration = 10
+	rotation_speed = 0.1
+	combat_max_speed = 6
+	combat_rotation_speed = 0.6
+	collision_radius = 1
+	is_space_object = yes
+	graphical_culture = no
+	modifier = {
+		ship_evasion_add = 60
+	}
+	max_hitpoints = 1000
+	size_multiplier = 1
+	fleet_slot_size = 1
+	num_target_locators = 0
+	icon_frame = 2
+	is_civilian = no
+	class = shipclass_military
+	is_designable = no
+	required_component_set = "combat_computers"
+	required_component_set = "ftl_components"
+}

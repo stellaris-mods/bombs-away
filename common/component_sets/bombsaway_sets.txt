@@ -1,0 +1,14 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+component_set = {
+	key = "bombsaway_set"
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+}

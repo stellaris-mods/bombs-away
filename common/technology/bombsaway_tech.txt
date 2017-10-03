@@ -1,0 +1,55 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+tech_bombsaway_standard = {
+	area = engineering
+	cost = 480
+	tier = 1
+	category = { rocketry }
+	ai_update_type = military
+	prerequisites = { "tech_missiles_2" }
+	weight = 95
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+}

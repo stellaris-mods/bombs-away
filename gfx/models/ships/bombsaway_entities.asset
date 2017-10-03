@@ -1,0 +1,21 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+entity = {
+	name = "bombsaway_standard_entity"
+	pdxmesh = "space_mine_mesh"
+	cull_radius = 1000
+
+	default_state = "idle"
+	state = { name = "idle"	animation = "rotate"
+		event = { time = 0 particle = "minefield_mine_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	scale = 3
+}

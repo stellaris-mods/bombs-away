@@ -1,0 +1,39 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+namespace = bombsAwayBomb
+
+ship_event = {
+	id = bombsAwayBomb.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { exists = this }
+	immediate = {
+		if = {
+			limit = { is_in_combat = no }
+			destroy_ship = THIS
+			break = yes
+		}
+		fleet = {
+			random_combatant_fleet = {
+				random_owned_ship = {
+					limit = {
+						distance = {
+							source = ROOT
+							max_distance = 2
+						}
+					}
+					reduce_hp = 5000
+					destroy_ship = ROOT
+				}
+			}
+		}
+		ship_event = { id = bombsAwayBomb.1 days = 2 }
+	}
+}

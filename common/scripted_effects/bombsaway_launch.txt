@@ -1,0 +1,195 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+bombsaway_psijump = {
+	every_owned_ship = {
+		limit = {
+			has_component = BOMBSAWAY_STANDARD_BOMB
+			exists = fleet
+			fleet = { is_same_value = FROMFROM }
+		}
+		if = {
+			limit = { NOT = { has_ship_flag = "bombsaway_launched" } }
+			fleet = {
+				create_ship = {
+					name = "BOMB"
+					design = "BOMB Psi Jump"
+				}
+				last_created_ship = { ship_event = { id = bombsAwayBomb.1 days = 3 } }
+			}
+			set_timed_ship_flag = {
+				flag = "bombsaway_launched"
+				days = 10
+			}
+		}
+	}
+}
+
+bombsaway_jump = {
+	every_owned_ship = {
+		limit = {
+			has_component = BOMBSAWAY_STANDARD_BOMB
+			exists = fleet
+			fleet = { is_same_value = FROMFROM }
+		}
+		if = {
+			limit = { NOT = { has_ship_flag = "bombsaway_launched" } }
+			fleet = {
+				create_ship = {
+					name = "BOMB"
+					design = "BOMB Jump"
+				}
+				last_created_ship = { ship_event = { id = bombsAwayBomb.1 days = 3 } }
+			}
+			set_timed_ship_flag = {
+				flag = "bombsaway_launched"
+				days = 10
+			}
+		}
+	}
+}
+
+bombsaway_warp = {
+	every_owned_ship = {
+		limit = {
+			has_component = BOMBSAWAY_STANDARD_BOMB
+			exists = fleet
+			fleet = { is_same_value = FROMFROM }
+		}
+		if = {
+			limit = { NOT = { has_ship_flag = "bombsaway_launched" } }
+			fleet = {
+				create_ship = {
+					name = "BOMB"
+					design = "BOMB Warp"
+				}
+				last_created_ship = { ship_event = { id = bombsAwayBomb.1 days = 3 } }
+			}
+			set_timed_ship_flag = {
+				flag = "bombsaway_launched"
+				days = 10
+			}
+		}
+	}
+}
+
+bombsaway_hyper = {
+	every_owned_ship = {
+		limit = {
+			has_component = BOMBSAWAY_STANDARD_BOMB
+			exists = fleet
+			fleet = { is_same_value = FROMFROM }
+		}
+		if = {
+			limit = { NOT = { has_ship_flag = "bombsaway_launched" } }
+			fleet = {
+				create_ship = {
+					name = "BOMB"
+					design = "BOMB Hyper"
+				}
+				last_created_ship = { ship_event = { id = bombsAwayBomb.1 days = 3 } }
+			}
+			set_timed_ship_flag = {
+				flag = "bombsaway_launched"
+				days = 10
+			}
+		}
+	}
+}
+
+bombsaway_wormhole = {
+	every_owned_ship = {
+		limit = {
+			has_component = BOMBSAWAY_STANDARD_BOMB
+			exists = fleet
+			fleet = { is_same_value = FROMFROM }
+		}
+		if = {
+			limit = { NOT = { has_ship_flag = "bombsaway_launched" } }
+			fleet = {
+				create_ship = {
+					name = "BOMB"
+					design = "BOMB Wormhole"
+				}
+				last_created_ship = { ship_event = { id = bombsAwayBomb.1 days = 3 } }
+			}
+			set_timed_ship_flag = {
+				flag = "bombsaway_launched"
+				days = 10
+			}
+		}
+	}
+}
+
+
+	# owner = {
+	# 	create_fleet = {
+	# 		name = "BOMB"
+	# 		settings = {
+	# 			spawn_debris = no # country type doesn't spawn debris anyway
+	# 			is_boss = yes
+	# 		}
+	# 		effect = {
+	# 			set_event_locked = yes
+	# 			set_fleet_stance = aggressive
+	# 			set_owner = PREV
+	# 			create_ship = {
+	# 				name = "BOMB"
+	# 				design = "BOMB"
+	# 			}
+	# 			set_location = PREVPREV
+	# 			queue_actions = {
+	# 				repeat = {
+	# 					while = {
+	# 						id = bombMove.1
+	# 						exists = event_target:bombsaway_target
+	# 						distance = {
+	# 							source = event_target:ass_target
+	# 							max_distance = 8 # 8 is orbit range, I think
+	# 						}
+	# 					}
+	# 					move_to = event_target:bombsaway_target
+	# 					wait = 1
+	# 				}
+	# 				effect = {
+	# 					id = bombMove.2
+	# 					if = {
+	# 						limit = { exists = event_target:bombsaway_target }
+	# 						event_target:bombsaway_target = {
+	# 							reduce_hp = 800
+	# 						}
+	# 					}
+	# 					destroy_fleet = THIS
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+
+# set_event_locked = yes
+#
+# create_ship properties:
+# upgradable = no
+# ftl = country
+#
+# create_fleet properties:
+# set_take_point = yes
+#
+# create_fleet settings:
+# settings = {
+# spawn_debris = no
+# can_upgrade = no
+# can_change_composition = no
+# can_auto_repair
+# can_recharge_shield
+# can_change_leader = no
+# garrison = yes
+# ai_ignore_strength = yes
+# is_boss = yes

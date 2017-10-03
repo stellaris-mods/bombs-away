@@ -1,0 +1,17 @@
+﻿l_english:
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+tech_bombsaway_standard: "Explosive Self-propelled Bombs"
+tech_bombsaway_standard_desc: "Gives you IMBA BOMBS LULZ"
+
+bombsaway_set: "Bombs"
+bombsaway_set_DESC: "Boom boom boom boom, I want you in my room."
+
+BOMBSAWAY_STANDARD_BOMB: "Explosive Self-propelled Bomb"
+BOMBSAWAY_STANDARD_BOMB_DESC: "Desc desc desc desc desc desc."

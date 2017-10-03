@@ -1,0 +1,46 @@
+###
+# This file is part of a project hosted at https://github.com/stellaris-mods
+# Copyright (c) 2017 folk@folk.wtf
+#
+# LICENSE: CC-BY-NC 4.0
+# https://creativecommons.org/licenses/by-nc/4.0/legalcode
+###
+
+
+namespace = bombsAwayCombat
+
+# on_entering_battle
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+country_event = {
+	id = bombsAwayCombat.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROMFROM = {
+			any_ship = {
+				has_component = BOMBSAWAY_STANDARD_BOMB
+			}
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_technology
+			tech_psi_jump_drive_1      = { bombsaway_psijump = yes }
+			tech_jump_drive_1          = { bombsaway_jump = yes }
+			tech_warp_drive_1          = { bombsaway_warp = yes }
+			tech_warp_drive_2          = { bombsaway_warp = yes }
+			tech_warp_drive_3          = { bombsaway_warp = yes }
+			tech_hyper_drive_1         = { bombsaway_hyper = yes }
+			tech_hyper_drive_2         = { bombsaway_hyper = yes }
+			tech_hyper_drive_3         = { bombsaway_hyper = yes }
+			tech_wormhole_generation_1 = { bombsaway_wormhole = yes }
+			tech_wormhole_generation_2 = { bombsaway_wormhole = yes }
+			tech_wormhole_generation_3 = { bombsaway_wormhole = yes }
+		}
+	}
+}
