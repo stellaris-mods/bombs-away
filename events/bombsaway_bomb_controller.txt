@@ -29,11 +29,17 @@ ship_event = {
 							max_distance = 2
 						}
 					}
+					ROOT = { set_ship_flag = "destroyme" }
 					reduce_hp = 5000
-					destroy_ship = ROOT
 				}
 			}
 		}
-		ship_event = { id = bombsAwayBomb.1 days = 2 }
+		if = {
+			limit = { has_ship_flag = "destroyme" }
+				destroy_ship = ROOT
+			else = {
+				ship_event = { id = bombsAwayBomb.1 days = 2 }
+			}
+		}
 	}
 }
